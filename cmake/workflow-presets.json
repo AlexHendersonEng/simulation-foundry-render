@@ -1,0 +1,429 @@
+{
+    "version": 10,
+    "include": [
+        "${sourceDir}/cmake/configure-presets.json",
+        "${sourceDir}/cmake/build-presets.json"
+    ],
+    "workflowPresets": [
+        {
+            "name": "windows-x86-msvc-debug",
+            "displayName": "Windows x86 MSVC Debug",
+            "description": "Windows x86 MSVC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-msvc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-msvc-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x86-msvc-release",
+            "displayName": "Windows x86 MSVC Release",
+            "description": "Windows x86 MSVC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-msvc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-msvc-release"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-debug",
+            "displayName": "Windows x64 MSVC Debug",
+            "description": "Windows x64 MSVC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-msvc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-msvc-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-release",
+            "displayName": "Windows x64 MSVC Release",
+            "description": "Windows x64 MSVC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-msvc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-msvc-release"
+                }
+            ]
+        },
+        {
+            "name": "windows-x86-gcc-debug",
+            "displayName": "Windows x86 GCC Debug",
+            "description": "Windows x86 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x86-gcc-release",
+            "displayName": "Windows x86 GCC Release",
+            "description": "Windows x86 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-gcc-debug",
+            "displayName": "Windows x64 GCC Debug",
+            "description": "Windows x64 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-gcc-release",
+            "displayName": "Windows x64 GCC Release",
+            "description": "Windows x64 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "windows-x86-clang-debug",
+            "displayName": "Windows x86 Clang Debug",
+            "description": "Windows x86 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x86-clang-release",
+            "displayName": "Windows x86 Clang Release",
+            "description": "Windows x86 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x86-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x86-clang-release"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-clang-debug",
+            "displayName": "Windows x64 Clang Debug",
+            "description": "Windows x64 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "windows-x64-clang-release",
+            "displayName": "Windows x64 Clang Release",
+            "description": "Windows x64 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "windows-x64-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "windows-x64-clang-release"
+                }
+            ]
+        },
+        {
+            "name": "linux-x86-gcc-debug",
+            "displayName": "Linux x86 GCC Debug",
+            "description": "Linux x86 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x86-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x86-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "linux-x86-gcc-release",
+            "displayName": "Linux x86 GCC Release",
+            "description": "Linux x86 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x86-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x86-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Linux x64 GCC Debug",
+            "description": "Linux x64 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x64-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x64-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Linux x64 GCC Release",
+            "description": "Linux x64 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x64-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x64-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "linux-x86-clang-debug",
+            "displayName": "Linux x86 Clang Debug",
+            "description": "Linux x86 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x86-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x86-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "linux-x86-clang-release",
+            "displayName": "Linux x86 Clang Release",
+            "description": "Linux x86 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x86-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x86-clang-release"
+                }
+            ]
+        },
+        {
+            "name": "linux-x64-clang-debug",
+            "displayName": "Linux x64 Clang Debug",
+            "description": "Linux x64 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x64-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x64-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "linux-x64-clang-release",
+            "displayName": "Linux x64 Clang Release",
+            "description": "Linux x64 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "linux-x64-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "linux-x64-clang-release"
+                }
+            ]
+        },
+        {
+            "name": "macos-x86-gcc-debug",
+            "displayName": "macOS x86 GCC Debug",
+            "description": "macOS x86 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x86-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x86-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "macos-x86-gcc-release",
+            "displayName": "macOS x86 GCC Release",
+            "description": "macOS x86 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x86-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x86-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "macos-x64-gcc-debug",
+            "displayName": "macOS x64 GCC Debug",
+            "description": "macOS x64 GCC Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x64-gcc-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x64-gcc-debug"
+                }
+            ]
+        },
+        {
+            "name": "macos-x64-gcc-release",
+            "displayName": "macOS x64 GCC Release",
+            "description": "macOS x64 GCC Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x64-gcc-release"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x64-gcc-release"
+                }
+            ]
+        },
+        {
+            "name": "macos-x86-clang-debug",
+            "displayName": "macOS x86 Clang Debug",
+            "description": "macOS x86 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x86-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x86-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "macos-x86-clang-release",
+            "displayName": "macOS x86 Clang Release",
+            "description": "macOS x86 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x86-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x86-clang-release"
+                }
+            ]
+        },
+        {
+            "name": "macos-x64-clang-debug",
+            "displayName": "macOS x64 Clang Debug",
+            "description": "macOS x64 Clang Debug Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x64-clang-debug"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x64-clang-debug"
+                }
+            ]
+        },
+        {
+            "name": "macos-x64-clang-release",
+            "displayName": "macOS x64 Clang Release",
+            "description": "macOS x64 Clang Release Workflow",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "macos-x64-clang-release"
+                },
+                {
+                    "type": "build",
+                    "name": "macos-x64-clang-release"
+                }
+            ]
+        }
+    ]
+}

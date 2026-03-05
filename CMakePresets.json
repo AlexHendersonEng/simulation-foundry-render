@@ -1,0 +1,8 @@
+{
+    "version": 10,
+    "include": [
+        "${sourceDir}/cmake/configure-presets.json",
+        "${sourceDir}/cmake/build-presets.json",
+        "${sourceDir}/cmake/workflow-presets.json"
+    ]
+}

@@ -1,0 +1,413 @@
+{
+    "version": 10,
+    "configurePresets": [
+        {
+            "name": "base",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+            }
+        },
+        {
+            "name": "windows",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            },
+            "inherits": [
+                "base"
+            ]
+        },
+        {
+            "name": "linux",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            },
+            "inherits": [
+                "base"
+            ]
+        },
+        {
+            "name": "macos",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            },
+            "inherits": [
+                "base"
+            ]
+        },
+        {
+            "name": "msvc",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe"
+            }
+        },
+        {
+            "name": "gcc",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++"
+            }
+        },
+        {
+            "name": "clang",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        },
+        {
+            "name": "x86",
+            "hidden": true,
+            "architecture": {
+                "value": "x86",
+                "strategy": "external"
+            }
+        },
+        {
+            "name": "x64",
+            "hidden": true,
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            }
+        },
+        {
+            "name": "debug",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "release",
+            "hidden": true,
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "windows-x86-msvc-debug",
+            "displayName": "Windows x86 MSVC Debug",
+            "description": "Windows x86 MSVC Debug Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "msvc",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x86-msvc-release",
+            "displayName": "Windows x86 MSVC Release",
+            "description": "Windows x86 MSVC Release Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "msvc",
+                "release"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-debug",
+            "displayName": "Windows x64 MSVC Debug",
+            "description": "Windows x64 MSVC Debug Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "msvc",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x64-msvc-release",
+            "displayName": "Windows x64 MSVC Release",
+            "description": "Windows x64 MSVC Release Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "msvc",
+                "release"
+            ]
+        },
+        {
+            "name": "windows-x86-gcc-debug",
+            "displayName": "Windows x86 GCC Debug",
+            "description": "Windows x86 GCC Debug Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x86-gcc-release",
+            "displayName": "Windows x86 GCC Release",
+            "description": "Windows x86 GCC Release Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "gcc",
+                "release"
+            ]
+        },
+        {
+            "name": "windows-x64-gcc-debug",
+            "displayName": "Windows x64 GCC Debug",
+            "description": "Windows x64 GCC Debug Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x64-gcc-release",
+            "displayName": "Windows x64 GCC Release",
+            "description": "Windows x64 GCC Release Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "gcc",
+                "release"
+            ]
+        },
+        {
+            "name": "windows-x86-clang-debug",
+            "displayName": "Windows x86 Clang Debug",
+            "description": "Windows x86 Clang Debug Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x86-clang-release",
+            "displayName": "Windows x86 Clang Release",
+            "description": "Windows x86 Clang Release Configuration",
+            "inherits": [
+                "windows",
+                "x86",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-debug",
+            "displayName": "Windows x64 Clang Debug",
+            "description": "Windows x64 Clang Debug Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "windows-x64-clang-release",
+            "displayName": "Windows x64 Clang Release",
+            "description": "Windows x64 Clang Release Configuration",
+            "inherits": [
+                "windows",
+                "x64",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "linux-x86-gcc-debug",
+            "displayName": "Linux x86 GCC Debug",
+            "description": "Linux x86 GCC Debug Configuration",
+            "inherits": [
+                "linux",
+                "x86",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "linux-x86-gcc-release",
+            "displayName": "Linux x86 GCC Release",
+            "description": "Linux x86 GCC Release Configuration",
+            "inherits": [
+                "linux",
+                "x86",
+                "gcc",
+                "release"
+            ]
+        },
+        {
+            "name": "linux-x64-gcc-debug",
+            "displayName": "Linux x64 GCC Debug",
+            "description": "Linux x64 GCC Debug Configuration",
+            "inherits": [
+                "linux",
+                "x64",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "linux-x64-gcc-release",
+            "displayName": "Linux x64 GCC Release",
+            "description": "Linux x64 GCC Release Configuration",
+            "inherits": [
+                "linux",
+                "x64",
+                "gcc",
+                "release"
+            ]
+        },
+        {
+            "name": "linux-x86-clang-debug",
+            "displayName": "Linux x86 Clang Debug",
+            "description": "Linux x86 Clang Debug Configuration",
+            "inherits": [
+                "linux",
+                "x86",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "linux-x86-clang-release",
+            "displayName": "Linux x86 Clang Release",
+            "description": "Linux x86 Clang Release Configuration",
+            "inherits": [
+                "linux",
+                "x86",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "linux-x64-clang-debug",
+            "displayName": "Linux x64 Clang Debug",
+            "description": "Linux x64 Clang Debug Configuration",
+            "inherits": [
+                "linux",
+                "x64",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "linux-x64-clang-release",
+            "displayName": "Linux x64 Clang Release",
+            "description": "Linux x64 Clang Release Configuration",
+            "inherits": [
+                "linux",
+                "x64",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "macos-x86-clang-debug",
+            "displayName": "macOS x86 Clang Debug",
+            "description": "macOS x86 Clang Debug Configuration",
+            "inherits": [
+                "macos",
+                "x86",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "macos-x86-clang-release",
+            "displayName": "macOS x86 Clang Release",
+            "description": "macOS x86 Clang Release Configuration",
+            "inherits": [
+                "macos",
+                "x86",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "macos-x64-clang-debug",
+            "displayName": "macOS x64 Clang Debug",
+            "description": "macOS x64 Clang Debug Configuration",
+            "inherits": [
+                "macos",
+                "x64",
+                "clang",
+                "debug"
+            ]
+        },
+        {
+            "name": "macos-x64-clang-release",
+            "displayName": "macOS x64 Clang Release",
+            "description": "macOS x64 Clang Release Configuration",
+            "inherits": [
+                "macos",
+                "x64",
+                "clang",
+                "release"
+            ]
+        },
+        {
+            "name": "macos-x86-gcc-debug",
+            "displayName": "macOS x86 GCC Debug",
+            "description": "macOS x86 GCC Debug Configuration",
+            "inherits": [
+                "macos",
+                "x86",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "macos-x86-gcc-release",
+            "displayName": "macOS x86 GCC Release",
+            "description": "macOS x86 GCC Release Configuration",
+            "inherits": [
+                "macos",
+                "x86",
+                "gcc",
+                "release"
+            ]
+        },
+        {
+            "name": "macos-x64-gcc-debug",
+            "displayName": "macOS x64 GCC Debug",
+            "description": "macOS x64 GCC Debug Configuration",
+            "inherits": [
+                "macos",
+                "x64",
+                "gcc",
+                "debug"
+            ]
+        },
+        {
+            "name": "macos-x64-gcc-release",
+            "displayName": "macOS x64 GCC Release",
+            "description": "macOS x64 GCC Release Configuration",
+            "inherits": [
+                "macos",
+                "x64",
+                "gcc",
+                "release"
+            ]
+        }
+    ]
+}
