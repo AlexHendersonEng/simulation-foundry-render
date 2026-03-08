@@ -7,6 +7,7 @@ Simulation Foundry Render is a developer friendly repository for rendering simul
 
 ## Prerequisites
 
+- Vulkan SDK
 - A supported C++ compiler (MSVC on Windows, clang or gcc on macOS/Linux)
 - vcpkg for dependency management
 - clang-format and clang-tidy for code formatting and static analysis

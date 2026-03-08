@@ -23,7 +23,8 @@ int main(void) {
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
   // Open a window and create its OpenGL context
-  GLFWwindow* window = glfwCreateWindow(1024, 768, "Window", nullptr, nullptr);
+  GLFWwindow* window =
+      glfwCreateWindow(1024, 768, "Triangle", nullptr, nullptr);
   if (window == nullptr) {
     fprintf(stderr, "Failed to open GLFW window\n");
     getchar();
@@ -51,8 +52,8 @@ int main(void) {
   glBindVertexArray(VertexArrayID);
 
   // Create and compile our GLSL program from the shaders
-  GLuint programID = load_shaders("shaders/vertex_shader.glsl",
-                                  "shaders/fragment_shader.glsl");
+  GLuint programID =
+      load_shaders("shaders/vertex.vert", "shaders/fragment.frag");
 
   static const GLfloat g_vertex_buffer_data[] = {
       -1.0f, -1.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,

@@ -8,6 +8,12 @@ include("${CMAKE_SOURCE_DIR}/cmake/utils.cmake")
 # Variables
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Find packages
+find_package(glfw3 CONFIG REQUIRED)
+find_package(GLEW CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(Vulkan REQUIRED)
+
 # Source
 add_subdirectory("${CMAKE_SOURCE_DIR}/src")
 

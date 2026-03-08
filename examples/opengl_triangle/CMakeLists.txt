@@ -10,4 +10,4 @@ add_custom_target(copy_shaders ALL
 
 # Executable
 add_executable("${target_name}" "opengl_triangle.cpp")
-target_link_libraries("${target_name}" PRIVATE "simulation_foundry_render")
+target_link_libraries("${target_name}" PRIVATE "simulation_foundry_render" "glfw" "GLEW::GLEW" "glm::glm")
